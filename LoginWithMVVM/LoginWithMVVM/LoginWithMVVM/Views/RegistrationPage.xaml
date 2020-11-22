@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:LoginWithMVVM.ViewModel"
+             x:Class="LoginWithMVVM.Views.RegistrationPage"
+             x:DataType="vm:RegistationViewModel">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid VerticalOptions="Center"
+              HorizontalOptions="FillAndExpand"
+              Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <Image Source="Intec.png" Grid.Column="0" Grid.Row="0" WidthRequest="200" HeightRequest="200"/>
+                <Entry Text="{Binding Name}" Placeholder="Name" Grid.Column="0" Grid.Row="1"  />
+                <Entry Text="{Binding Email}" Placeholder="Email" Grid.Column="0" Grid.Row="2"/>
+                <Entry Text="{Binding Password}" Placeholder="Password" Grid.Column="0" Grid.Row="3"  IsPassword="true"/>
+                <Entry Text="{Binding ConfirmPassword}" Placeholder="Confirm password" Grid.Column="0" Grid.Row="4"  IsPassword="true"/>
+                <Button  Grid.Column="0" Grid.Row="5" Text="Register" TextColor="White" BackgroundColor="Red" Command="{Binding RegisterCommand}"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
