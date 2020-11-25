@@ -4,11 +4,12 @@
             xmlns:vm="clr-namespace:LoginWithMVVM.ViewModel"
             
              x:Class="LoginWithMVVM.Views.LoginPage"
-            x:DataType="vm:LoginViewModel">
+            x:DataType="vm:LoginViewModel" 
+            Title="Log In">
     <!--x:DataType="vm:LoginViewModel"-->
-              
-    
-    <ContentPage Title="Login" IconImageSource="accessibility.png">
+
+
+    <ContentPage Title="Login"  IconImageSource="accessibility.png">
         <ScrollView>
             <Grid VerticalOptions="Center"
               HorizontalOptions="FillAndExpand"
@@ -40,7 +41,7 @@
             </Grid>
         </ScrollView>
     </ContentPage>
-    <ContentPage Title="Home" IconImageSource="home.png">
+    <ContentPage Title="Home" IconImageSource="home.png" >
         <ScrollView>
             <Label Text="This is home screen" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large"/>
         </ScrollView>

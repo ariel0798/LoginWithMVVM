@@ -1,9 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LoginWithMVVM.Views.HomePage">
+             xmlns:vm="clr-namespace:LoginWithMVVM.ViewModel"
+             x:Class="LoginWithMVVM.Views.HomePage"
+            NavigationPage.HasNavigationBar="True"
+            Title="Discovery">
   <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+    <ContentPage Title="Home" IconImageSource="home.png">
+    </ContentPage>
+
+    <ContentPage Title="Discovery" IconImageSource="Location.png">
+        <ScrollView>
+            
+            <Grid VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand"
+              Padding="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+
+                </Grid.RowDefinitions>
+
+                <Frame BorderColor="Gray"
+                         HasShadow="True" Grid.Column="0" Grid.Row="0">
+                    <StackLayout>
+                        <Image Source="{Binding MenuOptionList[0].Image}" WidthRequest="100" HeightRequest="100" />
+                        <Label Text="{Binding MenuOptionList[0].Title}" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Gray"
+                         HasShadow="True" Grid.Column="1" Grid.Row="0">
+                    <StackLayout>
+                        <Image Source="{Binding MenuOptionList[1].Image}" WidthRequest="100" HeightRequest="100" />
+                        <Label Text="{Binding MenuOptionList[1].Title}" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Gray" 
+                         HasShadow="True" Grid.Column="0" Grid.Row="1">
+                    <StackLayout>
+                        <Image Source="{Binding MenuOptionList[2].Image}" WidthRequest="100" HeightRequest="100" />
+                        <Label Text="{Binding MenuOptionList[2].Title}" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Gray"
+                         HasShadow="True" Grid.Column="1" Grid.Row="1">
+                    <StackLayout>
+                        <Image Source="{Binding MenuOptionList[3].Image}" WidthRequest="100" HeightRequest="100" />
+                        <Label Text="{Binding MenuOptionList[3].Title}" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Gray"
+                         HasShadow="True" Grid.Column="0" Grid.Row="2">
+                    <StackLayout>
+                        <Image Source="{Binding MenuOptionList[4].Image}" WidthRequest="100" HeightRequest="100" />
+                        <Label Text="{Binding MenuOptionList[4].Title}" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BorderColor="Gray"
+                         HasShadow="True" Grid.Column="1" Grid.Row="2">
+                    <StackLayout>
+                        <Image Source="{Binding MenuOptionList[5].Image}" WidthRequest="100" HeightRequest="100" />
+                        <Label Text="{Binding MenuOptionList[5].Title}" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+
+            </Grid>
+            
+            <!--
+            <Grid BindableLayout.ItemsSource="{Binding MenuOptionList}" 
+          VerticalOptions="Center"
+          HorizontalOptions="Center"
+              Padding="20">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate >
+                        <Frame BorderColor="Gray"
+                         HasShadow="True" Margin="0" >
+                            <StackLayout>
+                                <Image Source="{Binding Image}" WidthRequest="100" HeightRequest="100" />
+                                <Label Text = "{Binding Title}" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </Grid>
+            -->
+        </ScrollView>
+    </ContentPage>
+    
+
+    <ContentPage Title="Bookmarks" IconImageSource="Bookmark.png">
+    </ContentPage>
+
+    <ContentPage Title="Top foods" IconImageSource="Trophy.png">
+    </ContentPage>
+
+    <ContentPage Title="Profile" IconImageSource="Profile.png">
+    </ContentPage>
+
 </TabbedPage>

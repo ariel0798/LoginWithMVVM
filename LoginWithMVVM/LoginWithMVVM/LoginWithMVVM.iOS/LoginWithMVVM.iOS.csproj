@@ -142,4 +142,34 @@
   <ItemGroup>
     <BundleResource Include="Resources\accessibility.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Waiter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nearby.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\beer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\cafe.png" />
+  </ItemGroup>
 </Project>
